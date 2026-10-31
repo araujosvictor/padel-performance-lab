@@ -20,7 +20,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p vendor/mediapipe/wasm /tmp/mp-package
-          npm pack @mediapipe/tasks-vision@0.10.22 --pack-destination /tmp/mp-package
+          npm pack @mediapipe/tasks-vision@1.2.0 --pack-destination /tmp/mp-package
           tar -xzf /tmp/mp-package/*.tgz -C /tmp/mp-package
           cp /tmp/mp-package/package/vision_bundle.mjs vendor/mediapipe/vision_bundle.mjs
           cp /tmp/mp-package/package/wasm/* vendor/mediapipe/wasm/
